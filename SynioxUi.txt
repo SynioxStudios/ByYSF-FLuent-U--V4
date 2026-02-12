@@ -118,8 +118,8 @@ function Library:StartFlowRGB(c1, c2, c3)
             
             Themes.SpeedHubX.Accent = points[1].col
 
-            if Library.Creator and Library.Creator.UpdateTheme then
-                Library.Creator.UpdateTheme()
+            if Creator and Creator.UpdateTheme then
+                Creator.UpdateTheme()
             end
 
 do 
