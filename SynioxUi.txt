@@ -121,6 +121,9 @@ function Library:StartFlowRGB(c1, c2, c3)
             if Creator and Creator.UpdateTheme then
                 Creator.UpdateTheme()
             end
+        end
+    end)
+end
 
 do 
 	local GUI = game:GetService("CoreGui"):FindFirstChild("OpenClose")
