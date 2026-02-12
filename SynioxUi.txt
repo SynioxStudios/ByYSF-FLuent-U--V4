@@ -73,7 +73,23 @@ local Themes = {
 	}
 }
 
--- Bu fonksiyon senin dışarıdan yazdığın renkleri kütüphaneye yükler
+local Library = {
+	Version = "4.0.0",
+	OpenFrames = {},
+	Options = {},
+	Themes = Themes.Names,
+	Window = nil,
+	WindowFrame = nil,
+	Unloaded = false,
+	Creator = nil,
+	DialogOpen = false,
+	UseAcrylic = false,
+	Acrylic = false,
+	Transparency = true,
+	MinimizeKeybind = nil,
+	MinimizeKey = Enum.KeyCode.LeftControl,
+}
+
 function Library:UpdateCustomTheme(colors)
 	if colors and #colors >= 3 then
 		Themes.SpeedHubX.AcrylicGradient = ColorSequence.new({
@@ -84,27 +100,6 @@ function Library:UpdateCustomTheme(colors)
 		Themes.SpeedHubX.Accent = colors[1]
 	end
 end
-
-local Library = {
-	Version = "4.0.0",
-
-	OpenFrames = {},
-	Options = {},
-	Themes = Themes.Names,
-
-	Window = nil,
-	WindowFrame = nil,
-	Unloaded = false,
-
-	Creator = nil,
-
-	DialogOpen = false,
-	UseAcrylic = false,
-	Acrylic = false,
-	Transparency = true,
-	MinimizeKeybind = nil,
-	MinimizeKey = Enum.KeyCode.LeftControl,
-}
 
 do 
 	local GUI = game:GetService("CoreGui"):FindFirstChild("OpenClose")
