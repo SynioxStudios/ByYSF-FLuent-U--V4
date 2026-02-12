@@ -96,7 +96,7 @@ function Library:StartFlowRGB(c1, c2, c3)
         while task.wait(0.02) do
             if Library.Unloaded then break end
             
-            offset = offset + 0.008
+            offset = offset + 0.05
             if offset > 1 then offset = 0 end
             
             local p1 = (0 + offset) % 1
