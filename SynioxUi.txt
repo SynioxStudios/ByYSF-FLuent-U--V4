@@ -30,7 +30,7 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function(f) end
 
 local Themes = {
 	Names = {"SynioxHub"},
-	SpeedHubX = {
+	SynioxHub = {
 		Name = "SynioxHub",
 		Accent = Color3.fromRGB(160, 0, 0),
 		AcrylicMain = Color3.fromRGB(20, 20, 20),
@@ -110,13 +110,13 @@ function Library:StartFlowRGB(c1, c2, c3)
             }
             table.sort(points, function(a, b) return a.pos < b.pos end)
             
-            Themes.SpeedHubX.AcrylicGradient = ColorSequence.new({
+            Themes.SynioxHub.AcrylicGradient = ColorSequence.new({
                 ColorSequenceKeypoint.new(0, points[1].col),
                 ColorSequenceKeypoint.new(0.5, points[2].col),
                 ColorSequenceKeypoint.new(1, points[3].col)
             })
             
-            Themes.SpeedHubX.Accent = points[1].col
+            Themes.SynioxHub.Accent = points[1].col
 
             if Creator and Creator.UpdateTheme then
                 Creator.UpdateTheme()
@@ -772,7 +772,7 @@ function Creator.GetThemeProperty(Property)
 	if Themes[Library.Theme][Property] then
 		return Themes[Library.Theme][Property]
 	end
-	return Themes["SpeedHubX"][Property]
+	return Themes["SynioxHub"][Property]
 end
 
 function Creator.New(Name, Properties, Children)
@@ -831,7 +831,7 @@ Library.Creator = Creator
 local New = Creator.New
 
 local GUI = New("ScreenGui", {
-	Name = "Speed_Hub_X_ScreenGui",
+	Name = "Syniox_Hub_ScreenGui",
 	Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")),
 })
 
