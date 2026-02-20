@@ -5455,7 +5455,7 @@ local SaveManager = {} do
 end
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "Speed_Hub_X_Config"
+	InterfaceManager.Folder = "Syniox_Hub_Config"
 	InterfaceManager.Settings = {
 		Acrylic = true,
 		Transparency = true,
