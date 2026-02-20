@@ -5577,7 +5577,7 @@ function Library:CreateWindow(Config)
 
 	Library.UseAcrylic = Config.Acrylic or false
 	Library.Acrylic = Config.Acrylic or false
-	Library.Theme = Config.Theme or "SpeedHubX"
+	Library.Theme = Config.Theme or "SynioxHub"
 	if Config.Acrylic then
 		Acrylic.init()
 	end
